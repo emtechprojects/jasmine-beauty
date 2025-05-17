@@ -1,8 +1,8 @@
 :root {
-    --font-small: 16px;
+    --font-small: 18px;
     --font-monts: "Montserrat", sans-serif;
-    ;
-    --font-delius: "Delius Swash Caps", cursive;
+    --font-playfair: "Playfair Display SC", serif;;
+    --font-dancing: "Dancing Script", cursive;;
 }
 
 *,
@@ -26,11 +26,13 @@ body {
 }
 
 h3 {
-    font-family: var(--font-monts);
+    font-size: 2.2em;
+    font-family: var(--font-dancing);
 }
 
 header {
     width: 98%;
+    padding-top: 3px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -39,6 +41,7 @@ header {
     left: 1%;
     z-index: 10;
     background-color: white;
+    border-radius: 50px;
 }
 
 header a img {
@@ -88,16 +91,34 @@ header nav {
 }
 
 .parallax h1 {
+    width: 30%;
+    min-width: 600px;
+    /* height: 30%; */
+    padding: 10px;
+    /* margin: 0 5px; */
     position: relative;
-    padding: 5px 10px;
-    margin: 0 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    top: 100px;
+    left: -25%;
     color: white;
-    font-size: 2.8em;
+    font-family: var(--font-dancing);
+    font-size: 3.8em;
+    font-weight: 800;
     text-align: center;
     text-shadow: 0px 0px 3px black;
     background-color: rgba(171, 171, 171, 0.798);
     border: 2px double black;
     border-radius: 15px;
+}
+
+.h1-break {
+    min-height: 100px;
+    position: absolute;
+    left: 45%;
+    top: 20px;
+    font-size: 0.6em;
 }
 
 .parallax::before {
@@ -114,7 +135,7 @@ header nav {
 }
 
 main {
-    margin-top: 100px;
+    margin-top: 110px;
     background-color: white;
 }
 
@@ -211,7 +232,7 @@ main {
 details {
     width: 80%;
     margin: 1rem auto;
-    padding: 1% 0;
+    padding: 1%;
     background: rgba(233, 215, 196, 0.8);
     border: 2px double rgb(181, 147, 168);
     box-shadow: 2px 3px 2px rgb(93, 76, 87);
@@ -233,7 +254,7 @@ summary {
     margin: 0 auto 0 auto;
     padding: 10px 0 7px;
     font-size: 1.9rem;
-    font-weight: 800;
+    font-weight: 600;
     letter-spacing: 1px;
     text-align: center;
     color: #633a0c;
@@ -283,9 +304,9 @@ summary::marker {
 
 .product-name,
 .package-name,
-.cart-name,
-h1 {
-    font-family: var(--font-delius);
+.cart-name {
+/* h1 { */
+    font-family: var(--font-playfair);
 }
 
 .product-body,
@@ -410,7 +431,7 @@ h1 {
 }
 
 .cart-item {
-    width: 78%;
+    width: 90%;
     max-width: 350px;
     min-height: 400px;
     margin: 10px auto 3%;

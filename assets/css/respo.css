@@ -1,22 +1,47 @@
-@media screen and (max-width:815px) {
+@media screen and (max-width:1222px) {
+    .parallax::before {
+        height: 280px;
+    }
+
+    .parallax h1 {
+        font-size: 2.8em;
+        min-width: 400px;
+        top: 60px;
+        left: -25%;
+    }
+    main {
+        margin-top: 10px;
+    }
+}
+
+@media screen and (max-width:1022px) {
+
+    .parallax h1 {
+        font-size: 2.2em;
+        min-width: 300px;
+    }
+}
+
+@media screen and (max-width:895px) {
     .banner {
         height: auto;
     }
 
     .parallax h1 {
         font-size: 1.8em;
+        width: 300px;
     }
 
     main {
-        margin-top: -20px;
-
+        margin-top: 30px;
     }
 
     .parallax {
         min-height: 300px;
     }
+
     .parallax::before {
-        height: 180px;
+        height: 220px;
     }
 
     .top-banner,
@@ -39,35 +64,73 @@
         border-top: 4px double grey;
         border-bottom: 4px double grey;
         border-radius: 10%;
-
     }
 
     .top-section-image {
         margin-bottom: -20px;
-
-    }
-
-    .top-section-image,
-    .bottom-section-image {
-        /* position: relative; */
     }
 
     .store-summary,
     .packages-summary {
-        font-size: 1em;
+        font-size: 1.1em;
     }
 }
 
+@media screen and (max-width:745px) {
+    main {
+        margin-top: -15px;
+    }
+    .parallax::before {
+        height: 180px;
+    }
+    .parallax h1 {
+        font-size: 1.6em;
+        top: 30px;
+        min-width: 250px;
+    }
+}
 @media screen and (max-width:565px) {
+    main {
+        margin-top: -75px;
+    }
+    .parallax::before {
+        height: 120px;
+    }
     .parallax h1 {
         font-size: 1.3em;
+        top: 10px;
+        min-width: 200px;
+    }
+
+    #contact {
+        width: 80%;
+        flex-direction: column;
+    }
+
+    .contact-socials {
+        margin: 2em auto 0;
+    }
+
+    details {
+        width: 90%;
     }
 }
 
 @media screen and (max-width:480px) {
-    .store-summary,
-    .packages-summary {
-        font-size: 1em;
+    .parallax::before {
+        height: 120px;
+    }
+    .parallax h1 {
+        font-size: 1.1em;
+        top: 10px;
+        min-width: 150px;
+    }
+
+    .product,
+    .package,
+    .cart-item {
+        width: 90%;
+        margin: 5% auto 3%;
     }
 }
 
