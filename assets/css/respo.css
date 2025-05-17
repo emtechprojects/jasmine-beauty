@@ -1,0 +1,94 @@
+@media screen and (max-width:815px) {
+    .banner {
+        height: auto;
+    }
+
+    .parallax h1 {
+        font-size: 1.8em;
+    }
+
+    main {
+        margin-top: -20px;
+
+    }
+
+    .parallax {
+        min-height: 300px;
+    }
+    .parallax::before {
+        height: 180px;
+    }
+
+    .top-banner,
+    .bottom-banner {
+        height: auto;
+        position: relative;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .bottom-banner {
+        margin-top: 2em;
+    }
+
+    .top-section-body,
+    .bottom-section-body {
+        width: 80%;
+        border-top: 0;
+        border-top: 4px double grey;
+        border-bottom: 4px double grey;
+        border-radius: 10%;
+
+    }
+
+    .top-section-image {
+        margin-bottom: -20px;
+
+    }
+
+    .top-section-image,
+    .bottom-section-image {
+        /* position: relative; */
+    }
+
+    .store-summary,
+    .packages-summary {
+        font-size: 1em;
+    }
+}
+
+@media screen and (max-width:565px) {
+    .parallax h1 {
+        font-size: 1.3em;
+    }
+}
+
+@media screen and (max-width:480px) {
+    .store-summary,
+    .packages-summary {
+        font-size: 1em;
+    }
+}
+
+/* 
+SMALL SCREEN
+MAIN
+- REDUCE TOP MARGIN
+TOP BANNER
+- FLEX COLUMN
+TB&BB IMAGE
+- POSITION RELATIVE
+PRODUCT, PACKAGE, CART - ITEM
+- EXPAND WIDTH
+CONTACT
+- FLEX COLUMN
+*/
+
+/* 
+LARGE SCREEN
+
+BANNER 60% MAX WIDTH
+
+
+*/
