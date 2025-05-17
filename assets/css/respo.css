@@ -78,28 +78,31 @@
 
 @media screen and (max-width:745px) {
     main {
-        margin-top: -15px;
+        margin-top: -10px;
     }
     .parallax::before {
         height: 180px;
     }
     .parallax h1 {
-        font-size: 1.6em;
+        font-size: 1.8em;
         top: 30px;
-        min-width: 250px;
+        /* min-width: 250px; */
+        max-width: 180px;
+
     }
 }
 @media screen and (max-width:565px) {
     main {
-        margin-top: -75px;
+        margin-top: -70px;
     }
     .parallax::before {
         height: 120px;
     }
     .parallax h1 {
-        font-size: 1.3em;
+        font-size: 1.6em;
         top: 10px;
-        min-width: 200px;
+        max-width: 100px;
+
     }
 
     #contact {
@@ -117,15 +120,25 @@
 }
 
 @media screen and (max-width:480px) {
+    header a img {
+        width: 65px;
+        height: 65px;
+    }
     .parallax::before {
-        height: 120px;
+        height: 160px;
+        top: 7%;
     }
     .parallax h1 {
-        font-size: 1.1em;
-        top: 10px;
-        min-width: 150px;
+        font-size: 1.4em;
+        top: 4px;
+        max-width: 190px;
+        min-width: 190px;
     }
-
+    
+    main {
+        margin-top: -80px;
+    }
+    
     .product,
     .package,
     .cart-item {
@@ -134,6 +147,17 @@
     }
 }
 
+@media screen and (max-width:440px) {
+    .parallax::before {
+        height: 140px;
+    }
+    .parallax h1 {
+        top: -15px;
+    }
+    main {
+        margin-top: -100px;
+    }
+}
 /* 
 SMALL SCREEN
 MAIN

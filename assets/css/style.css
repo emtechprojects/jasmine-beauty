@@ -37,7 +37,7 @@ header {
     justify-content: space-between;
     align-items: center;
     position: fixed;
-    top: 10px;
+    top: 3px;
     left: 1%;
     z-index: 10;
     background-color: white;
@@ -161,7 +161,7 @@ main {
     width: 90%;
     max-width: 900px;
     height: 700px;
-    margin: 5% auto 8%;
+    margin: 2% auto 8%;
 }
 
 .top-banner {
@@ -549,6 +549,16 @@ summary::marker {
     background-color: rgba(222, 156, 110, 0.8);
 }
 
+hr {
+    height: 3px;
+    background-color: #633a0c;
+}
+
+.top-section-body h3,
+.bottom-section-body h3 {
+    color: rgb(92, 53, 9);
+
+}
 .section-heading {
     text-align: center;
     margin: 1% 0;
