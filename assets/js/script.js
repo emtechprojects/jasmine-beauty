@@ -1,19 +1,19 @@
 const products = [
-  { ID: "JB-30811", Name: 'First Product', Src: './assets/images/cream.png', Desc: 'A short Product Descrition', Price: 45 },
-  { ID: "JB-30812", Name: 'Second Product', Src: './assets/images/cream.png', Desc: 'A short Product Descrition', Price: 75 },
-  { ID: "JB-30813", Name: 'Third Product', Src: './assets/images/cream.png', Desc: 'A short Product Descrition', Price: 75 },
-  { ID: "JB-30814", Name: 'Forth Product', Src: './assets/images/cream.png', Desc: 'A short Product Descrition', Price: 99 },
-  { ID: "JB-30815", Name: 'Fifth Product', Src: './assets/images/cream.png', Desc: 'A short Product Descrition', Price: 99 },
-  { ID: "JB-30816", Name: 'Sixth Product', Src: './assets/images/cream.png', Desc: 'A short Product Descrition', Price: 115 },
-  { ID: "JB-30817", Name: 'Seventh Product', Src: './assets/images/cream.png', Desc: 'A short Product Descrition', Price: 115 }
+  { ID: "JB-30811", Name: 'First Product', Src: './assets/images/cream-2.png', Desc: 'A short Product Descrition', Price: 45 },
+  { ID: "JB-30812", Name: 'Second Product', Src: './assets/images/cream-1.png', Desc: 'A short Product Descrition', Price: 75 },
+  { ID: "JB-30813", Name: 'Third Product', Src: './assets/images/cream-2.png', Desc: 'A short Product Descrition', Price: 75 },
+  { ID: "JB-30814", Name: 'Forth Product', Src: './assets/images/cream-1.png', Desc: 'A short Product Descrition', Price: 99 },
+  { ID: "JB-30815", Name: 'Fifth Product', Src: './assets/images/cream-2.png', Desc: 'A short Product Descrition', Price: 99 },
+  { ID: "JB-30816", Name: 'Sixth Product', Src: './assets/images/cream-1.png', Desc: 'A short Product Descrition', Price: 115 },
+  { ID: "JB-30817", Name: 'Seventh Product', Src: './assets/images/cream-2.png', Desc: 'A short Product Descrition', Price: 115 }
 ]
 const packages = [
-  { ID: "JB-30911", Name: 'Hydration Therapy Moisteriser', Src: './assets/images/pkg-1.png', Desc: 'Includes a bonus moisterising sanitizer from our range', Price: 95 },
-  { ID: "JB-30912", Name: '3 Travel Moituriser Package', Src: './assets/images/pkg-2.png', Desc: 'Includes a bonus moisterising sanitizer from our range', Price: 119 },
-  { ID: "JB-30913", Name: 'Hydration Therapy Moisteriser', Src: './assets/images/pkg-1.png', Desc: 'Includes a bonus moisterising sanitizer from our range', Price: 150 },
-  { ID: "JB-30914", Name: '3 Travel Moituriser Package', Src: './assets/images/pkg-2.png', Desc: 'Includes a bonus moisterising sanitizer from our range', Price: 175 },
-  { ID: "JB-30915", Name: 'Hydration Therapy Moisteriser', Src: './assets/images/pkg-1.png', Desc: 'Includes a bonus moisterising sanitizer from our range', Price: 250 },
-  { ID: "JB-30916", Name: '3 Travel Moituriser Package', Src: './assets/images/pkg-2.png', Desc: 'Includes a bonus moisterising sanitizer from our range', Price: 250 }
+  { ID: "JB-30911", Name: 'Hydration Therapy Moisteriser', Src: './assets/images/pkg-2.png', Desc: 'Includes a bonus moisterising sanitizer from our range', Price: 95 },
+  { ID: "JB-30912", Name: '3 Travel Moituriser Package', Src: './assets/images/pkg-1.png', Desc: 'Includes a bonus moisterising sanitizer from our range', Price: 119 },
+  { ID: "JB-30913", Name: 'Hydration Therapy Moisteriser', Src: './assets/images/pkg-2.png', Desc: 'Includes a bonus moisterising sanitizer from our range', Price: 150 },
+  { ID: "JB-30914", Name: '3 Travel Moituriser Package', Src: './assets/images/pkg-1.png', Desc: 'Includes a bonus moisterising sanitizer from our range', Price: 175 },
+  { ID: "JB-30915", Name: 'Hydration Therapy Moisteriser', Src: './assets/images/pkg-2.png', Desc: 'Includes a bonus moisterising sanitizer from our range', Price: 250 },
+  { ID: "JB-30916", Name: '3 Travel Moituriser Package', Src: './assets/images/pkg-1.png', Desc: 'Includes a bonus moisterising sanitizer from our range', Price: 250 }
 ]
 window.addEventListener('scroll', () => {
   let main = document.querySelector('main')
@@ -91,7 +91,6 @@ function decreaseItem(event) {
 let slideIndex = 0;
 carousel();
 function carousel() {
-  document.getElementById('about').style.animationName = 'fader'
   let i;
   let x = document.getElementsByClassName("slide-img");
   for (i = 0; i < x.length; i++) {
@@ -104,8 +103,9 @@ function carousel() {
 }
 
 let totalCartItems = 0
+const cartTotal = document.getElementById("cart-total")
 function upDateCartIcon() {
-  const cartTotal = document.getElementById("cart-total")
+  console.log(totalCartItems)
   cartTotal.textContent = totalCartItems
 }
 
@@ -161,7 +161,7 @@ function upDateCartHtml() {
 
   if (cartItems) {
     if (cartInLocal === null || (!typeof localStorage.cart) === "string" || cartInLocal.length === 0) {
-      upDateCartIcon()
+      cartTotal.textContent = 0
       cartItems.textContent = ("Your Cart Is Empty").toUpperCase()
     } else {
       cartItems.innerHTML = ""

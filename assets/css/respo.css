@@ -365,117 +365,211 @@
 }
 
 @media screen and (max-width:480px) {
+    header a img {
+        width: 60px;
+        height: 60px;
+    }
+
     .parallax::before {
         /* top: -4.7%; */
+        top: -61px;
     }
 
     .parallax h1 {
-        top: -45px;
+        top: -60px;
     }
 
     main {
-        margin-top: -38%;
+        margin-top: -40.5%;
     }
 }
 
 @media screen and (max-width:460px) {
     .parallax h1 {
-        font-size: 1.4em;
-        min-width: 190px;
-        top: -50px;
+        font-size: 1.5em;
+        min-width: 200px;
+        top: -60px;
     }
 
     .parallax::before {
         /* top: -5%; */
+        top: -63px;
     }
 
     main {
-        margin-top: -40%;
+        margin-top: -44%;
     }
 }
 
 @media screen and (max-width:445px) {
     .parallax::before {
         /* top: -5%; */
-        top: -50px;
+        top: -65px;
     }
 
     .parallax h1 {
         /* min-width: 180px; */
+        font-size: 1.3em;
+        min-width: 175px;
+        top: -65px;
     }
 
     main {
-        margin-top: -43%;
+        margin-top: -46%;
     }
 }
 
 @media screen and (max-width:425px) {
+    .parallax::before {
+        /* top: -5%; */
+        top: -68px;
+    }
+
     main {
-        margin-top: -45%;
+        margin-top: -49.5%;
     }
 }
 
-@media screen and (max-width:410px) {
+@media screen and (max-width:412px) {
     .parallax::before {
         /* top: -5.5%; */
+        top: -65px;
+    }
+    .h1-break {
+        top: 17px;
     }
 
     .parallax h1 {
-        font-size: 1.2em;
-        min-width: 170px;
-        top: -55px;
+        font-size: 1.3em;
+        min-width: 175px;
+        top: -70px;
     }
 
     main {
-        margin-top: -47.5%;
+        margin-top: -48%;
     }
 }
 
-@media screen and (max-width:390px) {
+@media screen and (max-width:395px) {
     .parallax::before {
         /* top: -5.7%; */
-        top: -57px;
+        top: -72px;
     }
 
     .parallax h1 {
-        font-size: 1.2em;
+        top: -72px;
     }
 
     main {
-        margin-top: -52.5%;
+        margin-top: -55.5%;
     }
 }
 
 @media screen and (max-width:379px) {
     .parallax::before {
         /* top: -6%; */
-        top: -58px;
+        top: -73px;
     }
 
     .parallax h1 {
-        font-size: 1.2em;
-        top: -60px;
+        left: -25%;
     }
 
     main {
-        margin-top: -52.5%;
+        margin-top: -59%;
     }
 }
 
 @media screen and (max-width:365px) {
     .parallax::before {
         /* top: -6%; */
-        top: -60px;
+        top: -75px;
+    }
+
+    .parallax h1 {
+        font-size: 1.25em;
+        min-width: 170px;
+        top: -74px;
+    }
+
+    main {
+        margin-top: -62%;
+    }
+}
+
+@media screen and (max-width:348px) {
+    .parallax::before {
+        /* top: -6%; */
+        top: -77px;
     }
 
     .parallax h1 {
         font-size: 1.2em;
         min-width: 165px;
-        top: -60px;
+        top: -77px;
     }
 
     main {
-        margin-top: -58%;
+        margin-top: -67%;
+    }
+}
+
+@media screen and (max-width:333px) {
+    .parallax::before {
+        /* top: -6%; */
+        top: -77px;
+    }
+
+    .parallax h1 {
+        font-size: 1.2em;
+        min-width: 165px;
+        top: -77px;
+    }
+
+    main {
+        margin-top: -70%;
+    }
+}
+
+@media screen and (max-width:318px) {
+    .nav-link {
+        font-size: 0.8em;
+    }
+
+    .parallax::before {
+        /* top: -6%; */
+        top: -81px;
+    }
+
+    .parallax h1 {
+        font-size: 1em;
+        min-width: 155px;
+        top: -79px;
+    }
+
+    main {
+        margin-top: -76%;
+    }
+}
+
+@media screen and (max-width:298px) {
+    .nav-link {
+        font-size: 0.8em;
+    }
+
+    .parallax::before {
+        /* top: -6%; */
+        top: -84px;
+    }
+
+    .parallax h1 {
+        font-size: 1.2rem;
+        min-width: 155px;
+        top: -84px;
+    }
+
+    main {
+        margin-top: -83%;
     }
 }
 
