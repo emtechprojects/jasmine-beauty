@@ -4,22 +4,22 @@
     }
 
     .parallax h1 {
-        font-size: 2.8em;
+        font-size: 3em;
         min-width: 400px;
         top: 60px;
         left: -25%;
     }
     main {
-        margin-top: 10px;
+        margin-top: 0%;
     }
 }
 
 @media screen and (max-width:1022px) {
 
-    .parallax h1 {
+    /* .parallax h1 {
         font-size: 2.2em;
         min-width: 300px;
-    }
+    } */
 }
 
 @media screen and (max-width:895px) {
@@ -28,22 +28,20 @@
     }
 
     .parallax h1 {
-        font-size: 1.8em;
-        width: 300px;
+        font-size: 2.2em;
+        min-width: 300px;
     }
 
     main {
-        margin-top: 30px;
+        margin-top: 2%;
     }
-
-    .parallax {
-        min-height: 300px;
-    }
-
     .parallax::before {
         height: 220px;
     }
-
+    .parallax {
+        min-height: 300px;
+    }
+    
     .top-banner,
     .bottom-banner {
         height: auto;
@@ -52,11 +50,9 @@
         justify-content: center;
         align-items: center;
     }
-
     .bottom-banner {
         margin-top: 2em;
     }
-
     .top-section-body,
     .bottom-section-body {
         width: 80%;
@@ -65,20 +61,17 @@
         border-bottom: 4px double grey;
         border-radius: 10%;
     }
-
     .top-section-image {
         margin-bottom: -20px;
     }
-
     .store-summary,
     .packages-summary {
         font-size: 1.1em;
     }
 }
-
-@media screen and (max-width:745px) {
+@media screen and (max-width:725px) {
     main {
-        margin-top: -10px;
+        margin-top: -3%;
     }
     .parallax::before {
         height: 180px;
@@ -86,23 +79,29 @@
     .parallax h1 {
         font-size: 1.8em;
         top: 30px;
-        /* min-width: 250px; */
+        min-width: 250px;
         max-width: 180px;
-
-    }
+    } 
 }
-@media screen and (max-width:565px) {
-    main {
-        margin-top: -70px;
+@media screen and (max-width:595px) {
+    header a img {
+        width: 65px;
+        height: 65px;
     }
-    .parallax::before {
+    main {
+        margin-top: -8.5%;
+    }
+    /* .parallax::before {
         height: 120px;
+    } */
+    .parallax::before {
+        /* height: 160px; */
+        top: 9%;
     }
     .parallax h1 {
-        font-size: 1.6em;
-        top: 10px;
-        max-width: 100px;
-
+        font-size: 1.8em;
+        top: 15px;
+        max-width: 90px;
     }
 
     #contact {
@@ -119,24 +118,18 @@
     }
 }
 
-@media screen and (max-width:480px) {
-    header a img {
-        width: 65px;
-        height: 65px;
-    }
+@media screen and (max-width:545px) {
     .parallax::before {
         height: 160px;
-        top: 7%;
+        top: 9.5%;
     }
+    
     .parallax h1 {
-        font-size: 1.4em;
         top: 4px;
-        max-width: 190px;
-        min-width: 190px;
     }
     
     main {
-        margin-top: -80px;
+        margin-top: -11%;
     }
     
     .product,
@@ -146,18 +139,94 @@
         margin: 5% auto 3%;
     }
 }
+@media screen and (max-width:505px) {
+    .parallax::before {
+        height: 160px;
+        top: 8.6%;
+    }
+    
+    .parallax h1 {
+        top: 0px;
+    }
+    
+    main {
+        margin-top: -14%;
+    }
+}
 
-@media screen and (max-width:440px) {
+@media screen and (max-width:480px) {
     .parallax::before {
         height: 140px;
+        top: 9%;
     }
     .parallax h1 {
+        top: -5px;
+    }
+    main {
+        margin-top: -16%;
+    }
+}
+@media screen and (max-width:460px) {
+    .parallax h1 {
+        top: -7px;
+    }
+    .parallax::before {
+        top: 9.2%;
+    }
+    main {
+        margin-top: -18%;
+    }
+}
+@media screen and (max-width:445px) {
+    .parallax::before {
+        top: 9%;
+    }
+    .parallax h1 {
+        top: -5px;
+    }
+    main {
+        margin-top: -19.5%;
+    }
+}
+@media screen and (max-width:425px) {
+    .parallax::before {
+        top: 8.5%;
+    }
+    .parallax h1 {
+        font-size: 1.6em;
+        top: -10px;
+    }
+    main {
+        margin-top: -22%;
+    }
+}
+@media screen and (max-width:410px) {
+    .parallax::before {
+        top: 8.5%;
+
+    }
+    .parallax h1 {
+        font-size: 1.6em;
+        top: -10px;
+    }
+    main {
+        margin-top: -23%;
+    }
+}
+@media screen and (max-width:390px) {
+    .parallax::before {
+        top: 8%;
+
+    }
+    .parallax h1 {
+        font-size: 1.6em;
         top: -15px;
     }
     main {
-        margin-top: -100px;
+        margin-top: -26.5%;
     }
 }
+
 /* 
 SMALL SCREEN
 MAIN

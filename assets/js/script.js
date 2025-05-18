@@ -202,4 +202,31 @@ function RemoveFromCart(id) {
   console.log(cartInLocal)
   upDateCartHtml()
 }
-function PurchaseItems() { }
+
+
+function purchaseItems(e) {
+  let lineItemsObject = { cartItems: [] }
+  let parent = e.target.parentElement
+  let cartItems = parent.querySelectorAll(".cart-item")
+  for (let i = 0; i < cartItems.length; i++) {
+      let cartItem = cartItems[i]
+      let cartItemAmounts = cartItem.querySelector(".cart-item-quant").textContent
+      let cartItemName = cartItem.querySelector(".cart-item-name").textContent
+      let cartItemDesc = cartItem.querySelector(".cart-item-desc").textContent
+      let cartItemImage = cartItem.querySelector(".cart-image").src
+      let cartItemSize = cartItem.querySelector(".cart-item-size").textContent
+      let cartItemCategory = cartItem.dataset.category
+      let objectParsedValues = { id: parseInt(cartItem.id), itemCategory: cartItemCategory, quantity: parseInt(cartItemAmounts), itemName: cartItemName, itemDesc: cartItemDesc, itemImg: cartItemImage, itemSize: cartItemSize === "one" ? "MD" : cartItemCategory === "shoes" ? parseInt(cartItemSize) : cartItemSize }
+      lineItemsObject.cartItems.push(objectParsedValues)
+  }
+  fetch("/checkout", { method: "POST", headers: { "Content-Type": "application/json", }, body: JSON.stringify({ lineItemsObject: lineItemsObject, totalCartItems: total }) }).then(async res => {
+      if (res.ok) return res.json()
+      const json = await res.json()
+      return await Promise.reject(json)
+  }).then(({ assets }) => {
+      localStorage.removeItem("OrderID")
+      localStorage.setItem("OrderID", `UG-${JSON.stringify(assets.orderNum)}`)
+      window.location = assets.url
+  }).catch(e => { console.log(e) })
+  localStorage.setItem("popup", !0)
+}
