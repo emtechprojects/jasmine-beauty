@@ -32,7 +32,6 @@ h3 {
 
 header {
     width: 98%;
-    padding-top: 3px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -40,7 +39,6 @@ header {
     top: 3px;
     left: 1%;
     z-index: 10;
-    background-color: white;
     border-radius: 50px;
 }
 
@@ -93,13 +91,13 @@ header nav {
     min-height: 100px;
     position: absolute;
     left: 45%;
-    top: 20px;
+    top: 25px;
     font-size: 0.6em;
 }
 
 .parallax h1 {
     width: 30%;
-    min-width: 600px;
+    min-width: 500px;
     /* height: 30%; */
     padding: 10px;
     /* margin: 0 5px; */
@@ -111,10 +109,10 @@ header nav {
     left: -25%;
     color: white;
     font-family: var(--font-dancing);
-    font-size: 3.8em;
+    font-size: 4em;
     font-weight: 800;
     text-align: center;
-    text-shadow: 0px 0px 3px black;
+    text-shadow: 0px 0px 5px black;
     background-color: rgba(171, 171, 171, 0.798);
     /* border: 2px double black; */
     border-radius: 15px;

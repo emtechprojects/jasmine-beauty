@@ -18,8 +18,10 @@ const packages = [
 window.addEventListener('scroll', () => {
   let main = document.querySelector('main')
   let header = document.querySelector('header')
-  if (main.getBoundingClientRect().top < 411) {
+  if (main.getBoundingClientRect().top < 40) {
     header.classList.add('nav-active')
+  } else {
+    header.classList.remove('nav-active')
   }
 })
 const productsHtml = document.querySelector('.products')
@@ -149,6 +151,7 @@ addCartBtn.forEach(btn => {
 })
 const removeCartBtn = document.querySelectorAll('.remove-cart-btn')
 console.log(removeCartBtn)
+// CHECK IF THIS IS HAPPENING 2X
 removeCartBtn.forEach((btn, index) => {
   btn.addEventListener('click', function (event) {
     console.log("CLICKCLICK")
