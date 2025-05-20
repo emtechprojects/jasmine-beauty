@@ -120,7 +120,7 @@ header nav {
 }
 .parallax::before {
     content: "";
-    background-image: url('../images/banners/bdrop-1.png');
+    background-image: url('../images/banners/bdrop-1-a.png');
     width: 100%;
     height: 380px;
     position: fixed;
