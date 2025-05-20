@@ -137,9 +137,11 @@ main {
 }
 
 #about {
+    width: 70%;
     height: 600px;
     min-height: 600px;
     max-height: 600px;
+    margin: auto;
     opacity: 90%;
     overflow: hidden;
     /* animation: fader 3.05s infinite; */

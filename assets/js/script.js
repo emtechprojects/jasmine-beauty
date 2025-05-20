@@ -1,11 +1,11 @@
 const products = [
-  { ID: 0, 'SKU': "JB-30811", Name: 'First Product', Src: './assets/images/cream-2.png', Desc: 'A short Product Descrition', Price: 45 },
-  { ID: 1, 'SKU': "JB-30812", Name: 'Second Product', Src: './assets/images/cream-1.png', Desc: 'A short Product Descrition', Price: 75 },
-  { ID: 2, 'SKU': "JB-30813", Name: 'Third Product', Src: './assets/images/cream-2.png', Desc: 'A short Product Descrition', Price: 75 },
-  { ID: 3, 'SKU': "JB-30814", Name: 'Forth Product', Src: './assets/images/cream-1.png', Desc: 'A short Product Descrition', Price: 99 },
-  { ID: 4, 'SKU': "JB-30815", Name: 'Fifth Product', Src: './assets/images/cream-2.png', Desc: 'A short Product Descrition', Price: 99 },
-  { ID: 5, 'SKU': "JB-30816", Name: 'Sixth Product', Src: './assets/images/cream-1.png', Desc: 'A short Product Descrition', Price: 115 },
-  { ID: 6, 'SKU': "JB-30817", Name: 'Seventh Product', Src: './assets/images/cream-2.png', Desc: 'A short Product Descrition', Price: 115 }
+  { ID: 0, 'SKU': "JB-30811", Name: 'First Product', Src: './assets/images/cream-2.png', Desc: 'A short Product Description', Price: 45 },
+  { ID: 1, 'SKU': "JB-30812", Name: 'Second Product', Src: './assets/images/cream-1.png', Desc: 'A short Product Description', Price: 75 },
+  { ID: 2, 'SKU': "JB-30813", Name: 'Third Product', Src: './assets/images/cream-2.png', Desc: 'A short Product Description', Price: 75 },
+  { ID: 3, 'SKU': "JB-30814", Name: 'Forth Product', Src: './assets/images/cream-1.png', Desc: 'A short Product Description', Price: 99 },
+  { ID: 4, 'SKU': "JB-30815", Name: 'Fifth Product', Src: './assets/images/cream-2.png', Desc: 'A short Product Description', Price: 99 },
+  { ID: 5, 'SKU': "JB-30816", Name: 'Sixth Product', Src: './assets/images/cream-1.png', Desc: 'A short Product Description', Price: 115 },
+  { ID: 6, 'SKU': "JB-30817", Name: 'Seventh Product', Src: './assets/images/cream-2.png', Desc: 'A short Product Description', Price: 115 }
 ]
 const packages = [
   { ID: 7, 'SKU': "JB-30911", Name: 'Hydration Therapy Moisteriser', Src: './assets/images/pkg-2.png', Desc: 'Includes a bonus moisterising sanitizer from our range', Price: 95 },
