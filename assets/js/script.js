@@ -1,19 +1,19 @@
 const products = [
-  { ID: "JB-30811", Name: 'First Product', Src: './assets/images/cream-2.png', Desc: 'A short Product Descrition', Price: 45 },
-  { ID: "JB-30812", Name: 'Second Product', Src: './assets/images/cream-1.png', Desc: 'A short Product Descrition', Price: 75 },
-  { ID: "JB-30813", Name: 'Third Product', Src: './assets/images/cream-2.png', Desc: 'A short Product Descrition', Price: 75 },
-  { ID: "JB-30814", Name: 'Forth Product', Src: './assets/images/cream-1.png', Desc: 'A short Product Descrition', Price: 99 },
-  { ID: "JB-30815", Name: 'Fifth Product', Src: './assets/images/cream-2.png', Desc: 'A short Product Descrition', Price: 99 },
-  { ID: "JB-30816", Name: 'Sixth Product', Src: './assets/images/cream-1.png', Desc: 'A short Product Descrition', Price: 115 },
-  { ID: "JB-30817", Name: 'Seventh Product', Src: './assets/images/cream-2.png', Desc: 'A short Product Descrition', Price: 115 }
+  { ID: 0, 'SKU': "JB-30811", Name: 'First Product', Src: './assets/images/cream-2.png', Desc: 'A short Product Descrition', Price: 45 },
+  { ID: 1, 'SKU': "JB-30812", Name: 'Second Product', Src: './assets/images/cream-1.png', Desc: 'A short Product Descrition', Price: 75 },
+  { ID: 2, 'SKU': "JB-30813", Name: 'Third Product', Src: './assets/images/cream-2.png', Desc: 'A short Product Descrition', Price: 75 },
+  { ID: 3, 'SKU': "JB-30814", Name: 'Forth Product', Src: './assets/images/cream-1.png', Desc: 'A short Product Descrition', Price: 99 },
+  { ID: 4, 'SKU': "JB-30815", Name: 'Fifth Product', Src: './assets/images/cream-2.png', Desc: 'A short Product Descrition', Price: 99 },
+  { ID: 5, 'SKU': "JB-30816", Name: 'Sixth Product', Src: './assets/images/cream-1.png', Desc: 'A short Product Descrition', Price: 115 },
+  { ID: 6, 'SKU': "JB-30817", Name: 'Seventh Product', Src: './assets/images/cream-2.png', Desc: 'A short Product Descrition', Price: 115 }
 ]
 const packages = [
-  { ID: "JB-30911", Name: 'Hydration Therapy Moisteriser', Src: './assets/images/pkg-2.png', Desc: 'Includes a bonus moisterising sanitizer from our range', Price: 95 },
-  { ID: "JB-30912", Name: '3 Travel Moituriser Package', Src: './assets/images/pkg-1.png', Desc: 'Includes a bonus moisterising sanitizer from our range', Price: 119 },
-  { ID: "JB-30913", Name: 'Hydration Therapy Moisteriser', Src: './assets/images/pkg-2.png', Desc: 'Includes a bonus moisterising sanitizer from our range', Price: 150 },
-  { ID: "JB-30914", Name: '3 Travel Moituriser Package', Src: './assets/images/pkg-1.png', Desc: 'Includes a bonus moisterising sanitizer from our range', Price: 175 },
-  { ID: "JB-30915", Name: 'Hydration Therapy Moisteriser', Src: './assets/images/pkg-2.png', Desc: 'Includes a bonus moisterising sanitizer from our range', Price: 250 },
-  { ID: "JB-30916", Name: '3 Travel Moituriser Package', Src: './assets/images/pkg-1.png', Desc: 'Includes a bonus moisterising sanitizer from our range', Price: 250 }
+  { ID: 7, 'SKU': "JB-30911", Name: 'Hydration Therapy Moisteriser', Src: './assets/images/pkg-2.png', Desc: 'Includes a bonus moisterising sanitizer from our range', Price: 95 },
+  { ID: 8, 'SKU': "JB-30912", Name: '3 Travel Moituriser Package', Src: './assets/images/pkg-1.png', Desc: 'Includes a bonus moisterising sanitizer from our range', Price: 119 },
+  { ID: 9, 'SKU': "JB-30913", Name: 'Hydration Therapy Moisteriser', Src: './assets/images/pkg-2.png', Desc: 'Includes a bonus moisterising sanitizer from our range', Price: 150 },
+  { ID: 10, 'SKU': "JB-30914", Name: '3 Travel Moituriser Package', Src: './assets/images/pkg-1.png', Desc: 'Includes a bonus moisterising sanitizer from our range', Price: 175 },
+  { ID: 11, 'SKU': "JB-30915", Name: 'Hydration Therapy Moisteriser', Src: './assets/images/pkg-2.png', Desc: 'Includes a bonus moisterising sanitizer from our range', Price: 250 },
+  { ID: 12, 'SKU': "JB-30916", Name: '3 Travel Moituriser Package', Src: './assets/images/pkg-1.png', Desc: 'Includes a bonus moisterising sanitizer from our range', Price: 250 }
 ]
 window.addEventListener('scroll', () => {
   let main = document.querySelector('main')
@@ -99,15 +99,14 @@ function carousel() {
     x[i].style.display = "none";
   }
   slideIndex++;
-  if (slideIndex > x.length) { slideIndex = 1 }
+  if (slideIndex > x.length) slideIndex = 1
   x[slideIndex - 1].style.display = "block";
-  setTimeout(carousel, 3100); // Change image every 3 seconds
+  setTimeout(carousel, 3500);
 }
 
 let totalCartItems = 0
 const cartTotal = document.getElementById("cart-total")
 function upDateCartIcon() {
-  console.log(totalCartItems)
   cartTotal.textContent = totalCartItems
 }
 
@@ -127,20 +126,19 @@ const cartInLocal = JSON.parse(localStorage.getItem('cart-items'))
 if (cartInLocal === null) localStorage.setItem('cart-items', '[]')
 console.log(cartInLocal)
 
-function AddToCart(id, name, src, desc, amount, price) {
+function AddToCart(id, name, src, desc, quantity, price) {
   const itemObj = {
     id: id,
     name: name,
     src: src,
     desc: desc,
-    amount: amount,
+    quantity: quantity,
     price: price
   }
   cartInLocal.push(itemObj)
   upDateCartIcon()
   localStorage.setItem("cart-items", JSON.stringify(cartInLocal))
 }
-
 const addCartBtn = document.querySelectorAll('.add-cart-btn')
 addCartBtn.forEach(btn => {
   btn.addEventListener('click', function (event) {
@@ -149,30 +147,24 @@ addCartBtn.forEach(btn => {
     upDateCartHtml()
   })
 })
-const removeCartBtn = document.querySelectorAll('.remove-cart-btn')
-console.log(removeCartBtn)
-// CHECK IF THIS IS HAPPENING 2X
-removeCartBtn.forEach((btn, index) => {
-  btn.addEventListener('click', function (event) {
-    console.log("CLICKCLICK")
-    RemoveFromCart(index)
-  })
-})
 
 const cartItems = document.querySelector('.cart-items')
+const cartTotalPriceHTML = document.querySelector('.cart-total-price')
 function upDateCartHtml() {
-
-  if (cartItems) {
-    if (cartInLocal === null || (!typeof localStorage.cart) === "string" || cartInLocal.length === 0) {
-      cartTotal.textContent = 0
-      cartItems.textContent = ("Your Cart Is Empty").toUpperCase()
-    } else {
-      cartItems.innerHTML = ""
-      totalCartItems = 0
-      cartInLocal.forEach((item, index) => {
-        totalCartItems++
-        upDateCartIcon()
-        let mealHTML = `<div class="cart-item" id=${item.id}>
+  let totalCartPrice = 0
+  if (cartInLocal === null || (!typeof localStorage.cart) === "string" || cartInLocal.length === 0) {
+    cartTotal.textContent = 0
+    cartTotalPriceHTML.textContent = totalCartPrice
+    cartItems.textContent = ("Your Cart Is Empty").toUpperCase()
+  } else {
+    cartItems.innerHTML = ""
+    totalCartItems = 0
+    totalCartPrice = 0
+    cartInLocal.forEach((item, index) => {
+      totalCartItems++
+      upDateCartIcon()
+      totalCartPrice += item.quantity * item.price
+      let itemHTML = `<div class="cart-item" id=${item.id}>
                           <div class="cart-image-price">
                               <img class="cart-image" alt="cart image" src=${item.src}>
                           </div>
@@ -180,56 +172,56 @@ function upDateCartHtml() {
                               <div class="cart-name">${item.name}</div>
                               <div class="cart-desc">${item.desc ? item.desc : "Monthly Special Item"}</div>
                               <div class="cart-price">
-                                      ${item.amount} <span>${item.amount > 1 ? "items" : "item"} @ $${item.price}</span>
+                                      ${item.quantity} <span>${item.quantity > 1 ? "items" : "item"} @ $${item.price}</span>
                                   <div class="cart-item-total">
-                                      Total $<span class="cart-item-total-amount">${(item.amount * item.price).toFixed(2)}</span>
+                                      Total $<span class="cart-item-total-amount">${(item.quantity * item.price).toFixed(2)}</span>
                                   </div>
                               </div>
                               <button aria-label="remove from cart" class="remove-cart-btn" onClick="RemoveFromCart(${index})"> Remove <span style="color: white; filter: drop-shadow(0px 0px 0.5px white) drop-shadow(0px 0px 0.5px white);">&#128722;</span></button>
                           </div>
                       </div>`
-        cartItems.innerHTML += mealHTML
-      })
-    }
+      cartItems.innerHTML += itemHTML
+    })
+    cartTotalPriceHTML.textContent = totalCartPrice
   }
 }
 upDateCartHtml()
-// cartInLocal.forEach(item => console.log(item))
 
 function RemoveFromCart(id) {
-  // let cartInFunction = JSON.parse(localStorage.getItem('cart-items'))
-  // cartInFunction.splice(id, 1)
-  // localStorage.setItem("cart-items", JSON.stringify(cartInLocal))
   cartInLocal.splice(id, 1)
   localStorage.setItem("cart-items", JSON.stringify(cartInLocal))
-  console.log(cartInLocal)
   upDateCartHtml()
 }
 
-
-function purchaseItems(e) {
-  let lineItemsObject = { cartItems: [] }
-  let parent = e.target.parentElement
-  let cartItems = parent.querySelectorAll(".cart-item")
-  for (let i = 0; i < cartItems.length; i++) {
-      let cartItem = cartItems[i]
-      let cartItemAmounts = cartItem.querySelector(".cart-item-quant").textContent
-      let cartItemName = cartItem.querySelector(".cart-item-name").textContent
-      let cartItemDesc = cartItem.querySelector(".cart-item-desc").textContent
-      let cartItemImage = cartItem.querySelector(".cart-image").src
-      let cartItemSize = cartItem.querySelector(".cart-item-size").textContent
-      let cartItemCategory = cartItem.dataset.category
-      let objectParsedValues = { id: parseInt(cartItem.id), itemCategory: cartItemCategory, quantity: parseInt(cartItemAmounts), itemName: cartItemName, itemDesc: cartItemDesc, itemImg: cartItemImage, itemSize: cartItemSize === "one" ? "MD" : cartItemCategory === "shoes" ? parseInt(cartItemSize) : cartItemSize }
-      lineItemsObject.cartItems.push(objectParsedValues)
-  }
-  fetch("/checkout", { method: "POST", headers: { "Content-Type": "application/json", }, body: JSON.stringify({ lineItemsObject: lineItemsObject, totalCartItems: total }) }).then(async res => {
+function initPayload() {
+  const cartItems = localStorage.getItem('cart-items')
+  fetch("/checkout", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify({ cartItems }),
+  })
+    .then(async res => {
       if (res.ok) return res.json()
       const json = await res.json()
       return await Promise.reject(json)
-  }).then(({ assets }) => {
-      localStorage.removeItem("OrderID")
-      localStorage.setItem("OrderID", `UG-${JSON.stringify(assets.orderNum)}`)
+    })
+    .then(({ assets }) => {
+      localStorage.setItem("OrderID", `JB-${JSON.stringify(assets.orderNum)}`)
+      console.log(localStorage.getItem('OrderID'))
       window.location = assets.url
-  }).catch(e => { console.log(e) })
-  localStorage.setItem("popup", !0)
+    })
+    .catch(e => {
+      console.log(e)
+    })
 }
+const checkoutBTN = document.querySelector(".checkout-btn")
+checkoutBTN.addEventListener('click', function (e) {
+  e.preventDefault()
+  parseInt(cartTotalPriceHTML.textContent) < 1 ?
+    alert("No products in cart.")
+    :
+    alert("{ error : function needs logic }")
+    // initPayload()
+})

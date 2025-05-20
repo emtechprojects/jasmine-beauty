@@ -1,4 +1,5 @@
 :root {
+    --color-page-green: #5d7857c7;
     --font-small: 18px;
     --font-monts: "Montserrat", sans-serif;
     --font-playfair: "Playfair Display SC", serif;;
@@ -136,6 +137,7 @@ main {
 }
 
 #about {
+    height: 600px;
     min-height: 600px;
     max-height: 600px;
     opacity: 90%;
@@ -160,7 +162,7 @@ main {
     width: 90%;
     max-width: 900px;
     height: 700px;
-    margin: 2% auto 8%;
+    margin: 5% auto 8%;
 }
 
 .top-banner {
@@ -173,6 +175,7 @@ main {
 .top-section-body {
     width: 60%;
     height: 100%;
+    margin-top: -20px;
     padding: 6% 2%;
     border-bottom: 4px double grey;
     border-top-right-radius: 10%;
@@ -186,6 +189,7 @@ main {
     height: 120%;
     max-height: 350px;
     margin-top: 20px;
+    margin-right: -5px;
     z-index: 7;
     box-shadow: 2px 3px 3px 2px grey;
     border-radius: 5%;
@@ -193,7 +197,7 @@ main {
 }
 
 .bottom-banner {
-    height: 380px;
+    height: 390px;
     display: flex;
     flex-direction: row-reverse;
 }
@@ -213,7 +217,8 @@ main {
     max-width: 350px;
     height: 100%;
     max-height: 350px;
-    margin: -20px;
+    margin: -27px;
+    margin-left: -5px;
     z-index: 7;
     box-shadow: 2px 3px 3px 2px grey;
     border-radius: 5%;
@@ -412,9 +417,16 @@ summary::marker {
     background-color: rgba(181, 206, 191, 0.8);
 }
 
+
+/* ### CART ### */
+/* ### CART ### */
+
+#cart {
+    padding: 0 0 1em;
+}
 .cart-items {
     width: 90%;
-    margin: 0 auto 1rem;
+    margin: 0 auto 1.2rem;
     padding: 1% 0;
     display: flex;
     justify-content: center;
@@ -457,6 +469,62 @@ summary::marker {
 .package-desc,
 .cart-desc {
     position: relative;
+}
+
+.cart-total {
+    width: 90%;
+    margin: auto;
+    padding: 10px 0;
+    text-align: center;
+}
+.cart-total-inner {
+    margin: 0 0 2px;
+    font-size: 1.2em;
+}
+.cart-total-price {
+    font-weight: 500;
+}
+
+.cart-total-btn-panel {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+.stripe-icon {
+    width: 240px;
+    height: 160px;
+    border: 1px solid black;
+    box-shadow: 0px 0px 2px black;
+    border-radius: 10px;
+}
+.stripe-icon-1 {
+    background-image: url('../images/stripe-pay-cropped-1.png');
+    background-size: 100%;
+}
+.stripe-icon-2 {
+    background-image: url('../images/stripe-pay-cropped-2.png');
+    background-size: 100%;
+}
+
+.checkout-btn {
+    margin: 5px 0;
+    padding: 10px;
+    color: white;
+    font-size: 0.9em !important;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-shadow: 0px 0px 2px grey;
+    border-radius: 5px;
+    /* background-color: #577c4fc7;  nice green*/ 
+    background-color: var(--color-page-green);
+    transition: 300ms;
+}
+.checkout-btn:hover {
+    border: 2px solid gray;
+    text-shadow: 0px 0px 2px black;
+    background-color: #76944dbb;
+    
 }
 
 .product-desc::before {

@@ -1,9 +1,4 @@
 @media screen and (max-width:1669px) {
-    .parallax::before {
-        /* top: 10%; */
-
-    }
-
     .parallax h1 {
         top: 80px;
         left: -25%;
@@ -168,9 +163,7 @@
     .top-section-body,
     .bottom-section-body {
         width: 80%;
-        border-top: 0;
-        border-top: 4px double grey;
-        border-bottom: 4px double grey;
+        margin-top: 0;
         border-radius: 10%;
     }
 
@@ -238,6 +231,21 @@
     main {
         margin-top: -9%;
     }
+    #cart {
+        padding-bottom: 1.5em;
+    }
+    .cart-total-inner {
+        font-size: 1.4em;
+        margin: 10px auto;
+
+    }
+    .cart-total-btn-panel {
+        gap: 1.5em;
+        flex-direction: column-reverse;
+    }
+    .checkout-btn {
+        order: 1;
+    }
 }
 
 @media screen and (max-width:815px) {
@@ -256,7 +264,6 @@
     main {
         margin-top: -11%;
     }
-
 
 }
 
@@ -291,6 +298,19 @@
 
     main {
         margin-top: -17%;
+    }
+    #cart {
+        padding-bottom: 1.5em;
+    }
+    .cart-total-inner {
+        font-size: 1.4em;
+    }
+    .cart-total-btn-panel {
+        gap: 1.5em;
+        flex-direction: column-reverse;
+    }
+    .checkout-btn {
+        order: 1;
     }
 
 }
