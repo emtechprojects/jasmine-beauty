@@ -1,20 +1,11 @@
 const products = [
-  { ID: 0, 'SKU': "JB-30811", Name: 'First Product', Src: './assets/images/cream-2.png', Desc: 'A short Product Description', Price: 45 },
-  { ID: 1, 'SKU': "JB-30812", Name: 'Second Product', Src: './assets/images/cream-1.png', Desc: 'A short Product Description', Price: 75 },
-  { ID: 2, 'SKU': "JB-30813", Name: 'Third Product', Src: './assets/images/cream-2.png', Desc: 'A short Product Description', Price: 75 },
-  { ID: 3, 'SKU': "JB-30814", Name: 'Forth Product', Src: './assets/images/cream-1.png', Desc: 'A short Product Description', Price: 99 },
-  { ID: 4, 'SKU': "JB-30815", Name: 'Fifth Product', Src: './assets/images/cream-2.png', Desc: 'A short Product Description', Price: 99 },
-  { ID: 5, 'SKU': "JB-30816", Name: 'Sixth Product', Src: './assets/images/cream-1.png', Desc: 'A short Product Description', Price: 115 },
-  { ID: 6, 'SKU': "JB-30817", Name: 'Seventh Product', Src: './assets/images/cream-2.png', Desc: 'A short Product Description', Price: 115 }
+  { ID: 0, 'SKU': "JB-30811", Name: 'Coconut Hair Shampoo', Src: './assets/images/products/shampoo-bg.png', Desc: 'Suitable for all hair type&apos;s. Achieve best results with our coconut hair conditioner', Price: 45 },
+  { ID: 1, 'SKU': "JB-30812", Name: 'Coconut Hair Conditioner', Src: './assets/images/products/conditioner-bg.png', Desc: 'Suitable for all hair type&apos;s. Achieve best results with our coconut hair shampoo', Price: 75 },
+  { ID: 2, 'SKU': "JB-30813", Name: 'Disposable Pedicure Set', Src: './assets/images/products/pedi-bg.png', Desc: 'Useful &amp; compact. Made with durable sponge', Price: 75 },
+  { ID: 3, 'SKU': "JB-30814", Name: 'Disposable Spa Cover', Src: './assets/images/products/spa-bg.png', Desc: 'Expands to fit small to large spa&apos;s', Price: 99 },
+  { ID: 4, 'SKU': "JB-30815", Name: 'Disposable Slippers', Src: './assets/images/products/slippers-bg.png', Desc: 'Comfortable Inner Sole. Expands to fit most feet', Price: 99 },
 ]
-const packages = [
-  { ID: 7, 'SKU': "JB-30911", Name: 'Hydration Therapy Moisteriser', Src: './assets/images/pkg-2.png', Desc: 'Includes a bonus moisterising sanitizer from our range', Price: 95 },
-  { ID: 8, 'SKU': "JB-30912", Name: '3 Travel Moituriser Package', Src: './assets/images/pkg-1.png', Desc: 'Includes a bonus moisterising sanitizer from our range', Price: 119 },
-  { ID: 9, 'SKU': "JB-30913", Name: 'Hydration Therapy Moisteriser', Src: './assets/images/pkg-2.png', Desc: 'Includes a bonus moisterising sanitizer from our range', Price: 150 },
-  { ID: 10, 'SKU': "JB-30914", Name: '3 Travel Moituriser Package', Src: './assets/images/pkg-1.png', Desc: 'Includes a bonus moisterising sanitizer from our range', Price: 175 },
-  { ID: 11, 'SKU': "JB-30915", Name: 'Hydration Therapy Moisteriser', Src: './assets/images/pkg-2.png', Desc: 'Includes a bonus moisterising sanitizer from our range', Price: 250 },
-  { ID: 12, 'SKU': "JB-30916", Name: '3 Travel Moituriser Package', Src: './assets/images/pkg-1.png', Desc: 'Includes a bonus moisterising sanitizer from our range', Price: 250 }
-]
+
 window.addEventListener('scroll', () => {
   let main = document.querySelector('main')
   let header = document.querySelector('header')
@@ -25,52 +16,30 @@ window.addEventListener('scroll', () => {
   }
 })
 const productsHtml = document.querySelector('.products')
-const packagesHtml = document.querySelector('.packages')
 function addProductHTML(id, name, img, desc, price) {
   const html = `<div class="product" id=${id}>
                         <img src="${img}" class="product-image" alt="product-image">
                         <div class="product-body">
                             <span class="product-name">${name}</span>
                             <br>
+                            <hr>
                             <span class="product-desc">${desc}</span>
                             <br>
                             <span class="product-amount">
-                              <button class="input-down" aria-label="input down" id="changer">- </button>
-                              <input type="number" aria-label="input amount" class="input-amount" min="1" value="1"
-                                  name="item-amount" disabled>
-                              <button class="input-up" aria-label="input up" id="changer"> + </button>
+                            <button class="input-down" aria-label="input down" id="changer">- </button>
+                            <input type="number" aria-label="input amount" class="input-amount" min="1" value="1"
+                            name="item-amount" disabled>
+                            <button class="input-up" aria-label="input up" id="changer"> + </button>
                             </span>
                             $<span class="product-price">${price}</span>
+                           
                         </div>
                         <button class="add-cart-btn">Add to &#128722;</button>
                       </div>`
   return html
 }
-function addPackageHTML(id, name, img, desc, price) {
-  const html = `<div class="package" id=${id}>
-                        <img src="${img}" class="package-image" alt="package-image">
-                        <div class="package-body">
-                          <br>
-                            <span class="package-name">${name}</span>
-                            <br>
-                            <br>
-                            <span class="package-desc">${desc}</span>
-                            <br>
-                            <br>
-                            <span class="product-amount">
-                              <button class="input-down" aria-label="input down" id="changer">- </button>
-                              <input type="number" aria-label="input amount" class="input-amount" min="1" value="1"
-                                  name="item-amount" disabled>
-                              <button class="input-up" aria-label="input up" id="changer"> + </button>
-                            </span>
-                            $<span class="package-price">${price}</span>
-                        </div>
-                        <button class="add-cart-btn">Add to &#128722;</button>
-                      </div>`
-  return html
-}
-products.forEach(product => productsHtml.innerHTML += addProductHTML(product.ID, product.Name, product.Src, product.Desc, product.Price))
-packages.forEach(package => packagesHtml.innerHTML += addPackageHTML(package.ID, package.Name, package.Src, package.Desc, package.Price))
+
+productsHtml ? products.forEach(product => productsHtml.innerHTML += addProductHTML(product.ID, product.Name, product.Src, product.Desc, product.Price)) : -1
 
 const inputUP = document.querySelectorAll(".input-up")
 for (let i = 0; i < inputUP.length; i++) { let incrementUP = inputUP[i]; incrementUP.addEventListener("click", increaseItem) }
@@ -107,20 +76,20 @@ function carousel() {
 let totalCartItems = 0
 const cartTotal = document.getElementById("cart-total")
 function upDateCartIcon() {
-  cartTotal.textContent = totalCartItems
+  cartTotal ? cartTotal.textContent = totalCartItems :-1
 }
 
 const contactForm = document.querySelector('.contact-form')
+contactForm ? 
 contactForm.addEventListener('submit', function (ev) {
   ev.preventDefault()
   let target = ev.target
   const payLoad = {
     userName: target.querySelector('.user-name').value,
     userEmail: target.querySelector('.user-email').value,
-    userEnquiry: target.querySelector('.user-enq').value,
   }
-  console.log(payLoad)
-})
+  alert(`Thanks, ${payLoad.userName}!`)
+}) : -1
 
 const cartInLocal = JSON.parse(localStorage.getItem('cart-items'))
 if (cartInLocal === null) localStorage.setItem('cart-items', '[]')
@@ -153,11 +122,11 @@ const cartTotalPriceHTML = document.querySelector('.cart-total-price')
 function upDateCartHtml() {
   let totalCartPrice = 0
   if (cartInLocal === null || (!typeof localStorage.cart) === "string" || cartInLocal.length === 0) {
-    cartTotal.textContent = 0
-    cartTotalPriceHTML.textContent = totalCartPrice
-    cartItems.textContent = ("Your Cart Is Empty").toUpperCase()
+    cartTotal ? cartTotal.textContent = 0 : -1
+    cartTotalPriceHTML ? cartTotalPriceHTML.textContent = totalCartPrice : -1
+    cartItems ? cartItems.textContent = ("Your Cart Is Empty").toUpperCase() : -1
   } else {
-    cartItems.innerHTML = ""
+    cartItems ? cartItems.innerHTML = "" : -1
     totalCartItems = 0
     totalCartPrice = 0
     cartInLocal.forEach((item, index) => {
@@ -180,9 +149,9 @@ function upDateCartHtml() {
                               <button aria-label="remove from cart" class="remove-cart-btn" onClick="RemoveFromCart(${index})"> Remove <span style="color: white; filter: drop-shadow(0px 0px 0.5px white) drop-shadow(0px 0px 0.5px white);">&#128722;</span></button>
                           </div>
                       </div>`
-      cartItems.innerHTML += itemHTML
+      cartItems ? cartItems.innerHTML += itemHTML : -1
     })
-    cartTotalPriceHTML.textContent = totalCartPrice
+    cartTotalPriceHTML ? cartTotalPriceHTML.textContent = totalCartPrice : -1
   }
 }
 upDateCartHtml()
@@ -208,7 +177,7 @@ function initPayload() {
       return await Promise.reject(json)
     })
     .then(({ assets }) => {
-      localStorage.setItem("OrderID", `JB-${JSON.stringify(assets.orderNum)}`)
+      localStorage.setItem("OrderID", JSON.stringify(assets.orderNum))
       console.log(localStorage.getItem('OrderID'))
       window.location = assets.url
     })
@@ -217,11 +186,11 @@ function initPayload() {
     })
 }
 const checkoutBTN = document.querySelector(".checkout-btn")
-checkoutBTN.addEventListener('click', function (e) {
+checkoutBTN ? checkoutBTN.addEventListener('click', function (e) {
   e.preventDefault()
   parseInt(cartTotalPriceHTML.textContent) < 1 ?
     alert("No products in cart.")
     :
-    alert("{ error : function needs logic }")
     // initPayload()
-})
+    alert("{ EmTechProcess : Secure Stripe portal will now open }")
+}) : -1
